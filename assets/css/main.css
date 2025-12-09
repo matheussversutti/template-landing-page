@@ -1080,3 +1080,83 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+
+		/* ======================================
+   MELHORIAS MOBILE - RESPONSIVIDADE
+   Adicionar no final do arquivo
+   ====================================== */
+
+/* Desktop: mostra nome completo */
+@media screen and (min-width: 737px) {
+    .nome-completo {
+        display: block;
+    }
+    .nome-mobile {
+        display: none;
+    }
+}
+
+/* Mobile: melhorias de legibilidade */
+@media screen and (max-width: 736px) {
+    
+    /* Mostra versão mobile do nome */
+    .nome-completo {
+        display: none !important;
+    }
+    .nome-mobile {
+        display: block !important;
+    }
+    
+    /* Fundo mais escuro no mobile */
+    #wrapper > div[style*="position: absolute"] {
+        background: rgba(0,0,0,0.7) !important;
+    }
+    
+    /* Título maior e mais legível */
+    #header h1 {
+        font-size: 2.8em !important;
+        text-shadow: 4px 4px 20px rgba(0,0,0,1), 
+                     0px 0px 40px rgba(0,0,0,0.9) !important;
+        margin-bottom: 0.5em !important;
+        line-height: 1.2em !important;
+    }
+    
+    /* Subtítulos mais legíveis */
+    #header p {
+        font-size: 0.95em !important;
+        text-shadow: 3px 3px 15px rgba(0,0,0,1),
+                     0px 0px 25px rgba(0,0,0,0.8) !important;
+        line-height: 1.8em !important;
+        margin-bottom: 1em !important;
+    }
+    
+    /* Card semi-transparente atrás do conteúdo */
+    #header {
+        background: rgba(0,0,0,0.4) !important;
+        padding: 2em 1.2em !important;
+        border-radius: 20px !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Ícones sociais maiores e mais clicáveis */
+    #header nav ul li {
+        height: 6em !important;
+        width: 6em !important;
+        line-height: 6em !important;
+    }
+    
+    #header nav ul li a:before {
+        font-size: 2em !important;
+        width: 2.8em !important;
+        height: 2.8em !important;
+        line-height: 2.8em !important;
+    }
+    
+    /* Espaçamento entre ícones */
+    #header nav ul li {
+        margin: 0 0.3em !important;
+    }
+}
